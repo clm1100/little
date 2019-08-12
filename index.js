@@ -6,7 +6,9 @@ const app = express();
 app.get("/api",(req,res)=>{
     res.send({
         code:200,
-        msg:'success'
+        msg:'success',
+        NODE_ENV: process.env.NODE_ENV,
+        data: process.env.env_production
     })
 })
 
